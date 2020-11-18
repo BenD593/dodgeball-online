@@ -66,8 +66,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>resources\Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -152,7 +151,7 @@
       <DependentUpon>frmGameSetup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -184,17 +183,33 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="resources\1_D6.png" />
-    <EmbeddedResource Include="resources\2_D6.png" />
-    <EmbeddedResource Include="resources\3_D6.png" />
-    <EmbeddedResource Include="resources\4_D6.png" />
-    <EmbeddedResource Include="resources\5_D6.png" />
-    <EmbeddedResource Include="resources\6_D6.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="resources\exit-icon.png" />
     <EmbeddedResource Include="resources\help-icon.png" />
     <EmbeddedResource Include="resources\info-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\1_D6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\2_D6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\3_D6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\4_D6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\5_D6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\6_D6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
