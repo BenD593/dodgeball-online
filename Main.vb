@@ -31,13 +31,13 @@ Module Main
         subMissArrow(intMissDirection)
 
         If intThrowNumber = 1 Or intThrowNumber = 2 Then
-            frmGameActive.lblDice.Text = intThrowNumber & Environment.NewLine() & "So Miss By: " & fucThrowCalculation(intThrowNumber)
-            frmGameActive.lblMissDirection.Text = intMissDirection & Environment.NewLine() & "So Miss By: " & fucMissCalculation(intMissDirection)
-            frmGameActive.lblResult.Text = "You Missed by: " & fucThrowCalculation(intThrowNumber) & " In The Direction of: " & fucMissCalculation(intMissDirection) & Environment.NewLine() & "So: " & fucHitCheck(intThrowNumber, intMissDirection)
+            frmGameActive.lblDice.Text = intThrowNumber & Environment.NewLine() & "Miss by: " & fucThrowCalculation(intThrowNumber)
+            frmGameActive.lblMissDirection.Text = intMissDirection & Environment.NewLine() & "Miss direction: " & fucMissCalculation(intMissDirection)
+            frmGameActive.lblResult.Text = "You missed by: " & fucThrowCalculation(intThrowNumber) & " In the direction of: " & fucMissCalculation(intMissDirection) & Environment.NewLine() & "So: " & fucHitCheck(intThrowNumber, intMissDirection)
         ElseIf intThrowNumber = 3 Or intThrowNumber = 4 Then
-            frmGameActive.lblDice.Text = intThrowNumber & Environment.NewLine() & "So Miss By: " & fucThrowCalculation(intThrowNumber)
-            frmGameActive.lblMissDirection.Text = intMissDirection & Environment.NewLine() & "So " & fucMissCalculation(intMissDirection)
-            frmGameActive.lblResult.Text = "You Missed by: " & fucThrowCalculation(intThrowNumber) & " In The Direction of: " & fucMissCalculation(intMissDirection) & Environment.NewLine() & "So: " & fucHitCheck(intThrowNumber, intMissDirection)
+            frmGameActive.lblDice.Text = intThrowNumber & Environment.NewLine() & "Miss by: " & fucThrowCalculation(intThrowNumber)
+            frmGameActive.lblMissDirection.Text = intMissDirection & Environment.NewLine() & "Miss direction" & fucMissCalculation(intMissDirection)
+            frmGameActive.lblResult.Text = "You missed by: " & fucThrowCalculation(intThrowNumber) & " In the direction of: " & fucMissCalculation(intMissDirection) & Environment.NewLine() & "So: " & fucHitCheck(intThrowNumber, intMissDirection)
         ElseIf intThrowNumber = 5 Or intThrowNumber = 6 Then
             frmGameActive.lblDice.Text = intThrowNumber & Environment.NewLine() & "So " & fucThrowCalculation(intThrowNumber)
             frmGameActive.lblMissDirection.Text = ""
@@ -98,32 +98,32 @@ Module Main
                 strResult = fucTeamR() & fucMissHit(intThrowNumber, intMissDirection, strTarget)
 
                 If strResult = "BlueOut of Bounds" Or strResult = "GreenOut of Bounds" Then
-                    Return "Out of Bounds"
+                    Return "Out of bounds!"
                 End If
                 frmGameActive.Controls.Find("txt" & strResult, True).FirstOrDefault().BackColor = Color.Red
                 If frmGameActive.Controls.Find("txt" & strResult, True).FirstOrDefault().Text = "" Then
-                    Return "No Player Found at that Square!"
+                    Return "No player found at that square!"
                 ElseIf frmGameActive.Controls.Find("txt" & strResult, True).FirstOrDefault().Text <> "" Then
                     frmGameActive.btnCatch.Show()
                     frmGameActive.btnDodge.Show()
                     subScore(1)
-                    Return "Possible Hit on: " & frmGameActive.Controls.Find("txt" & strResult, True).FirstOrDefault().Text & ". They can now chose to Doge or Catch!"
+                    Return "Possible hit on: " & frmGameActive.Controls.Find("txt" & strResult, True).FirstOrDefault().Text & ". They can now chose to Dodge or Catch!"
                 Else
-                    Return "Error"
+                    Return "Error: funHitCheck - Invalid Data"
                 End If
             Case 5, 6
                 If frmGameActive.Controls.Find("txt" & strTarget, True).FirstOrDefault().Text = "" Then
-                    Return "No Player Found at that Square!"
+                    Return "No player found at that square!"
                 ElseIf frmGameActive.Controls.Find("txt" & strTarget, True).FirstOrDefault().Text <> "" Then
                     frmGameActive.btnCatch.Show()
                     frmGameActive.btnDodge.Show()
                     subScore(2)
-                    Return "Possible Hit on: " & frmGameActive.Controls.Find("txt" & strTarget, True).FirstOrDefault().Text & ". They can now chose to Doge or Catch!"
+                    Return "Possible hit on: " & frmGameActive.Controls.Find("txt" & strTarget, True).FirstOrDefault().Text & ". They can now chose to Doge or Catch!"
                 Else
-                    Return "Error"
+                    Return "Error: funHitCheck - Invalid Data"
                 End If
             Case Else
-                Return "Error"
+                Return "Error: funHitCheck - Invalid Data"
         End Select
     End Function
 
@@ -140,29 +140,29 @@ Module Main
                 Case 1, 2
 
                     If intDodgeNumber <= 2 Then
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to Dodge the Ball!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to dodge the ball!"
                         frmGameActive.Controls.Find("txt" & strResult, True).FirstOrDefault().BackColor = Color.Red
 
                     ElseIf intDodgeNumber > 2 Then
                         subScore(3)
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Dodged the Ball!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Dodged the ball!"
 
                     End If
                 Case 3, 4
                     If intDodgeNumber <= 3 Then
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to Dodge the Ball!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to dodge the ball!"
                         frmGameActive.Controls.Find("txt" & strResult, True).FirstOrDefault().BackColor = Color.Red
                     ElseIf intDodgeNumber > 3 Then
                         subScore(3)
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Doged the Ball!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Doged the ball!"
                     End If
                 Case 5, 6
                     If intDodgeNumber <= 4 Then
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to Dodge the Ball!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to dodge the ball!"
                         frmGameActive.Controls.Find("txt" & strTarget, True).FirstOrDefault().BackColor = Color.Red
                     ElseIf intDodgeNumber > 4 Then
                         subScore(3)
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Doged the Ball!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Doged the ball!"
                     End If
             End Select
         ElseIf choice = "Catch" Then
@@ -178,31 +178,31 @@ Module Main
                 Case 1, 2
 
                     If intCatchTotalNumber <= 10 Then
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to Catch the Ball!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to catch the ball!"
                         frmGameActive.Controls.Find("txt" & strResult, True).FirstOrDefault().BackColor = Color.Red
                     ElseIf intCatchTotalNumber > 10 Then
                         subScore(4)
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Catch the Ball!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Caught the ball!"
 
                     End If
                 Case 3, 4
                     If intCatchTotalNumber <= 11 Then
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to Catch the Ball!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to catch the ball!"
                         frmGameActive.Controls.Find("txt" & strResult, True).FirstOrDefault().BackColor = Color.Red
                     ElseIf intCatchTotalNumber > 11 Then
                         subScore(4)
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Catch the Ball!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Catch the ball!"
                     End If
                 Case 5, 6
                     If intCatchTotalNumber <= 12 Then
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to Catch the Ball!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to catch the ball!"
                         frmGameActive.Controls.Find("txt" & strTarget, True).FirstOrDefault().BackColor = Color.Red
                     ElseIf intCatchTotalNumber > 12 And intCatchTotalNumber <> 14 Then
                         subScore(4)
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Catch the Ball!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Catch the ball!"
                     ElseIf intCatchTotalNumber = 14 Then
                         subScore(10)
-                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Catch the Ball + 10 Points!"
+                        frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Catch the ball + 10 Points!"
                     End If
             End Select
 
@@ -296,9 +296,6 @@ Module Main
     Function fucMissHit(intThrowNumber As Integer, intMissDirection As Integer, target As String)
         target = target.Replace("Blue", "")
         target = target.Replace("Green", "")
-        Debug.WriteLine("Taget is: " & target)
-        Debug.WriteLine("Miss or Hit? " & intThrowNumber)
-        Debug.WriteLine("Miss Direction: " & intMissDirection)
         If intThrowNumber = 1 Or intThrowNumber = 2 Then
             Select Case (intMissDirection)
                 Case 1
