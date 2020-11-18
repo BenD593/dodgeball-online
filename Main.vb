@@ -3,19 +3,21 @@ Imports System
 Imports System.IO
 Imports System.Reflection
 Module Main
+    ' Public Variables for Dice Image '
+    Public myAssembly As Assembly = Assembly.GetExecutingAssembly()
+    Public steDice1 As Stream = myAssembly.GetManifestResourceStream("dodgeball_online.1_D6.png")
+    Public steDice2 As Stream = myAssembly.GetManifestResourceStream("dodgeball_online.2_D6.png")
+    Public steDice3 As Stream = myAssembly.GetManifestResourceStream("dodgeball_online.3_D6.png")
+    Public steDice4 As Stream = myAssembly.GetManifestResourceStream("dodgeball_online.4_D6.png")
+    Public steDice5 As Stream = myAssembly.GetManifestResourceStream("dodgeball_online.5_D6.png")
+    Public steDice6 As Stream = myAssembly.GetManifestResourceStream("dodgeball_online.6_D6.png")
+
+    ' Public Variables for Game '
     Public strBlueA1, strBlueA2, strBlueA3, strBlueA4, strBlueA5, strBlueB1, strBlueB2, strBlueB3, strBlueB4, strBlueB5, strBlueC1, strBlueC2, strBlueC3, strBlueC4, strBlueC5, strBlueD1, strBlueD2, strBlueD3, strBlueD4, strBlueD5, strBlueE1, strBlueE2, strBlueE3, strBlueE4, strBlueE5 As String
     Public strGreenA1, strGreenA2, strGreenA3, strGreenA4, strGreenA5, strGreenB1, strGreenB2, strGreenB3, strGreenB4, strGreenB5, strGreenC1, strGreenC2, strGreenC3, strGreenC4, strGreenC5, strGreenD1, strGreenD2, strGreenD3, strGreenD4, strGreenD5, strGreenE1, strGreenE2, strGreenE3, strGreenE4, strGreenE5 As String
     Public intRound, intPlayerRound, intThrowNumber, intMissDirection, intGreenScore, intBlueScore As Integer
     Public strTarget, strResult As String
     Public random As New Random()
-
-    Public myAssembly As Assembly = Assembly.GetExecutingAssembly()
-    Public steDice1 As Stream = myAssembly.GetManifestResourceStream("Dodgeball_on_Zoom.1_D6.png")
-    Public steDice2 As Stream = myAssembly.GetManifestResourceStream("Dodgeball_on_Zoom.2_D6.png")
-    Public steDice3 As Stream = myAssembly.GetManifestResourceStream("Dodgeball_on_Zoom.3_D6.png")
-    Public steDice4 As Stream = myAssembly.GetManifestResourceStream("Dodgeball_on_Zoom.4_D6.png")
-    Public steDice5 As Stream = myAssembly.GetManifestResourceStream("Dodgeball_on_Zoom.5_D6.png")
-    Public steDice6 As Stream = myAssembly.GetManifestResourceStream("Dodgeball_on_Zoom.6_D6.png")
 
     '#################################'
     '# Sub Procedure to Ouput Result #'
@@ -24,8 +26,10 @@ Module Main
 
         intThrowNumber = random.Next(1, 7)
         intMissDirection = random.Next(1, 9)
+
         subDieImage(intThrowNumber)
         subMissArrow(intMissDirection)
+
         If intThrowNumber = 1 Or intThrowNumber = 2 Then
             frmGameActive.lblDice.Text = intThrowNumber & Environment.NewLine() & "So Miss By: " & fucThrowCalculation(intThrowNumber)
             frmGameActive.lblMissDirection.Text = intMissDirection & Environment.NewLine() & "So Miss By: " & fucMissCalculation(intMissDirection)
@@ -41,6 +45,7 @@ Module Main
         Else
             frmGameActive.lblResult.Text = "Error: Throw out of Range!"
         End If
+
     End Sub
 
     '##########################################################'
@@ -48,12 +53,15 @@ Module Main
     '##########################################################'
     Function fucTeamR()
         Dim even_total As Decimal
+
         even_total = intPlayerRound / 2
+
         If even_total.ToString.Contains(".") Then
             Return "Blue"
         Else
             Return "Green"
         End If
+
     End Function
 
     '###################################################'
@@ -1052,4 +1060,22 @@ Module Main
         frmGameActive.btnPlayer.Hide()
     End Sub
 
+    Sub subExit()
+        Select Case MsgBox("Are you sure you want to Exit?", vbYesNo, "Dodgeball Online - Exit Confirmation")
+            Case MsgBoxResult.Yes
+                Application.Exit()
+            Case MsgBoxResult.No
+                Exit Sub
+        End Select
+    End Sub
+
+    Sub subHelp()
+        Dim webAddress As String = "https://dodgeball.bxdavies.co.uk/docs/"
+        Process.Start(webAddress)
+    End Sub
+
+    Sub subInfo()
+        Dim mymessage As String = "Dodgeball Online" & Environment.NewLine & "Version: 1.1" & Environment.NewLine & "Github: www.github.com/dodgeball-online/dodgeball-online" & Environment.NewLine & "This Program and its Source code is Licensed under General Public License v3.0, for more information see GitHub repository." & Environment.NewLine & Environment.NewLine & "Attribution: " & Environment.NewLine() & "Dice Images: Made by Alfredo Hernandez from www.flaticon.com" & Environment.NewLine & "Icons: Made by Google from www.flaticon.com"
+        MsgBox(mymessage)
+    End Sub
 End Module

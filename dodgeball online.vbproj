@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>dodgeball_online.My.MyApplication</StartupObject>
     <RootNamespace>dodgeball_online</RootNamespace>
-    <AssemblyName>dodgeball online</AssemblyName>
+    <AssemblyName>Dodgeball Online</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -40,7 +40,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>dodgeball online.xml</DocumentationFile>
+    <DocumentationFile>Dodgeball Online.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -50,7 +50,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>dodgeball online.xml</DocumentationFile>
+    <DocumentationFile>Dodgeball Online.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -191,6 +191,11 @@
     <EmbeddedResource Include="resources\6_D6.png" />
     <EmbeddedResource Include="resources\Icon.ico" />
     <EmbeddedResource Include="resources\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\exit-icon.png" />
+    <EmbeddedResource Include="resources\help-icon.png" />
+    <EmbeddedResource Include="resources\info-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -57,9 +57,39 @@ Public Class frmGameSetup
         strGreenE4 = txtGreenE4.Text
         strGreenE5 = txtGreenE5.Text
 
+
+        Dim lisBlueTeam As New List(Of String) From {strBlueA1, strBlueA2, strBlueA3, strBlueA4, strBlueA5, strBlueB1, strBlueB2, strBlueB3, strBlueB4, strBlueB5, strBlueC1, strBlueC2, strBlueC3, strBlueC4, strBlueC5, strBlueD1, strBlueD2, strBlueD3, strBlueD4, strBlueD5, strBlueE1, strBlueE2, strBlueE3, strBlueE4, strBlueE5}
+        Dim lisGreenTeam As New List(Of String) From {strGreenA1, strGreenA2, strGreenA3, strGreenA4, strGreenA5, strGreenB1, strGreenB2, strGreenB3, strGreenB4, strGreenB5, strGreenC1, strGreenC2, strGreenC3, strGreenC4, strGreenC5, strGreenD1, strGreenD2, strGreenD3, strGreenD4, strGreenD5, strGreenE1, strGreenE2, strGreenE3, strGreenE4, strGreenE5}
+
+        lisBlueTeam.RemoveAll(Function(str) String.IsNullOrWhiteSpace(str))
+        lisGreenTeam.RemoveAll(Function(str) String.IsNullOrWhiteSpace(str))
+
+        If lisGreenTeam.Count = 0 Or lisBlueTeam.Count = 0 Then
+            MsgBox("No players in either the Blue team or Green team! " & Environment.NewLine() & "Please add players and try again!", vbExclamation, "Dodegball Online - Error")
+            Exit Sub
+        End If
+
+
+        If lisGreenTeam.Count <> lisBlueTeam.Count Then
+            MsgBox("Teams are not equal! " & Environment.NewLine() & "Please add players and try again!", vbExclamation, "Dodegball Online - Error")
+            Exit Sub
+        End If
+
         frmGameActive.Activate()
         frmGameActive.Show()
         Me.Hide()
 
+    End Sub
+
+    Private Sub tsbExit_Click(sender As Object, e As EventArgs) Handles tsbExit.Click
+        subExit()
+    End Sub
+
+    Private Sub tsbHelp_Click(sender As Object, e As EventArgs) Handles tsbHelp.Click
+        subHelp()
+    End Sub
+
+    Private Sub tsbInfo_Click(sender As Object, e As EventArgs) Handles tsbInfo.Click
+        subInfo()
     End Sub
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmGameActive
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmGameActive
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGameActive))
@@ -113,7 +113,6 @@ Partial Class frmGameActive
         Me.lblTargetPlayer = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.pibDice = New System.Windows.Forms.PictureBox()
         Me.lblArrow = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.lblDice = New System.Windows.Forms.Label()
@@ -138,19 +137,25 @@ Partial Class frmGameActive
         Me.lblBlueScore = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.lblThrowInfo = New System.Windows.Forms.Label()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.timThrow = New System.Windows.Forms.Timer(Me.components)
         Me.timDodge = New System.Windows.Forms.Timer(Me.components)
         Me.timCatch = New System.Windows.Forms.Timer(Me.components)
+        Me.pibDice = New System.Windows.Forms.PictureBox()
+        Me.tsbExit = New System.Windows.Forms.ToolStripButton()
+        Me.tsbHelp = New System.Windows.Forms.ToolStripButton()
+        Me.tsbInfo = New System.Windows.Forms.ToolStripButton()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.TableLayoutPanel6.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
-        CType(Me.pibDice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel8.SuspendLayout()
         Me.TableLayoutPanel9.SuspendLayout()
         Me.TableLayoutPanel10.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
+        CType(Me.pibDice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtBlueD3
@@ -804,21 +809,23 @@ Partial Class frmGameActive
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel1, 0, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel2, 2, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label21, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label22, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label23, 2, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel4, 1, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel5, 1, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel8, 1, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel9, 2, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel10, 0, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel1, 0, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel2, 2, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label21, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label22, 0, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label23, 2, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel4, 1, 4)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel5, 1, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel8, 1, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel9, 2, 4)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel10, 0, 4)
+        Me.TableLayoutPanel3.Controls.Add(Me.ToolStrip1, 0, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 4
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel3.RowCount = 5
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
@@ -1176,14 +1183,14 @@ Partial Class frmGameActive
         '
         Me.Label21.AutoSize = True
         Me.TableLayoutPanel3.SetColumnSpan(Me.Label21, 3)
-        Me.Label21.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label21.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.White
-        Me.Label21.Location = New System.Drawing.Point(3, 0)
+        Me.Label21.Location = New System.Drawing.Point(3, 22)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(1346, 55)
+        Me.Label21.Size = New System.Drawing.Size(1346, 51)
         Me.Label21.TabIndex = 2
-        Me.Label21.Text = "Dodgeball on Zoom - Game Running"
+        Me.Label21.Text = "Dodgeball Online - Game Running"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label22
@@ -1240,6 +1247,7 @@ Partial Class frmGameActive
         Me.btnRound.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.btnRound.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnRound.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRound.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRound.ForeColor = System.Drawing.Color.White
         Me.btnRound.Location = New System.Drawing.Point(3, 3)
         Me.btnRound.Name = "btnRound"
@@ -1253,6 +1261,7 @@ Partial Class frmGameActive
         Me.btnPlayer.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.btnPlayer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPlayer.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPlayer.ForeColor = System.Drawing.Color.White
         Me.btnPlayer.Location = New System.Drawing.Point(3, 60)
         Me.btnPlayer.Name = "btnPlayer"
@@ -1266,6 +1275,7 @@ Partial Class frmGameActive
         Me.btnThrow.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.btnThrow.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnThrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnThrow.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnThrow.ForeColor = System.Drawing.Color.White
         Me.btnThrow.Location = New System.Drawing.Point(3, 174)
         Me.btnThrow.Name = "btnThrow"
@@ -1279,6 +1289,7 @@ Partial Class frmGameActive
         Me.btnTarget.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.btnTarget.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnTarget.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTarget.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTarget.ForeColor = System.Drawing.Color.White
         Me.btnTarget.Location = New System.Drawing.Point(3, 117)
         Me.btnTarget.Name = "btnTarget"
@@ -1307,6 +1318,7 @@ Partial Class frmGameActive
         Me.btnDodge.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.btnDodge.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnDodge.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDodge.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDodge.ForeColor = System.Drawing.Color.White
         Me.btnDodge.Location = New System.Drawing.Point(3, 3)
         Me.btnDodge.Name = "btnDodge"
@@ -1320,6 +1332,7 @@ Partial Class frmGameActive
         Me.btnCatch.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.btnCatch.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCatch.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCatch.ForeColor = System.Drawing.Color.White
         Me.btnCatch.Location = New System.Drawing.Point(199, 3)
         Me.btnCatch.Name = "btnCatch"
@@ -1410,17 +1423,6 @@ Partial Class frmGameActive
         Me.Label30.TabIndex = 9
         Me.Label30.Text = "Direction"
         Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'pibDice
-        '
-        Me.pibDice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pibDice.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pibDice.Location = New System.Drawing.Point(3, 81)
-        Me.pibDice.Name = "pibDice"
-        Me.pibDice.Size = New System.Drawing.Size(193, 80)
-        Me.pibDice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pibDice.TabIndex = 10
-        Me.pibDice.TabStop = False
         '
         'lblArrow
         '
@@ -1753,6 +1755,18 @@ Partial Class frmGameActive
         Me.lblThrowInfo.TabIndex = 10
         Me.lblThrowInfo.Text = "..."
         '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.TableLayoutPanel3.SetColumnSpan(Me.ToolStrip1, 3)
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbExit, Me.tsbHelp, Me.tsbInfo})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(1352, 22)
+        Me.ToolStrip1.TabIndex = 14
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
         'timThrow
         '
         Me.timThrow.Interval = 504
@@ -1765,6 +1779,41 @@ Partial Class frmGameActive
         '
         Me.timCatch.Interval = 500
         '
+        'pibDice
+        '
+        Me.pibDice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pibDice.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pibDice.Location = New System.Drawing.Point(3, 81)
+        Me.pibDice.Name = "pibDice"
+        Me.pibDice.Size = New System.Drawing.Size(193, 80)
+        Me.pibDice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pibDice.TabIndex = 10
+        Me.pibDice.TabStop = False
+        '
+        'tsbExit
+        '
+        Me.tsbExit.Image = Global.dodgeball_online.My.Resources.Resources.exit_icon
+        Me.tsbExit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbExit.Name = "tsbExit"
+        Me.tsbExit.Size = New System.Drawing.Size(46, 19)
+        Me.tsbExit.Text = "Exit"
+        '
+        'tsbHelp
+        '
+        Me.tsbHelp.Image = Global.dodgeball_online.My.Resources.Resources.help_icon
+        Me.tsbHelp.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbHelp.Name = "tsbHelp"
+        Me.tsbHelp.Size = New System.Drawing.Size(52, 19)
+        Me.tsbHelp.Text = "Help"
+        '
+        'tsbInfo
+        '
+        Me.tsbInfo.Image = Global.dodgeball_online.My.Resources.Resources.info_icon
+        Me.tsbInfo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbInfo.Name = "tsbInfo"
+        Me.tsbInfo.Size = New System.Drawing.Size(48, 19)
+        Me.tsbInfo.Text = "Info"
+        '
         'frmGameActive
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1773,7 +1822,7 @@ Partial Class frmGameActive
         Me.Controls.Add(Me.TableLayoutPanel3)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmGameActive"
-        Me.Text = "Dodgeball on Zoom "
+        Me.Text = "Dodgeball Online - Game Running"
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel3.ResumeLayout(False)
@@ -1784,13 +1833,15 @@ Partial Class frmGameActive
         Me.TableLayoutPanel6.ResumeLayout(False)
         Me.TableLayoutPanel5.ResumeLayout(False)
         Me.TableLayoutPanel5.PerformLayout()
-        CType(Me.pibDice, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel8.ResumeLayout(False)
         Me.TableLayoutPanel8.PerformLayout()
         Me.TableLayoutPanel9.ResumeLayout(False)
         Me.TableLayoutPanel9.PerformLayout()
         Me.TableLayoutPanel10.ResumeLayout(False)
         Me.TableLayoutPanel10.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
+        CType(Me.pibDice, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1923,4 +1974,8 @@ Partial Class frmGameActive
     Friend WithEvents lblResult As Label
     Friend WithEvents lblThrowInfo As Label
     Friend WithEvents lblDodgeCatchInfo As Label
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents tsbExit As ToolStripButton
+    Friend WithEvents tsbHelp As ToolStripButton
+    Friend WithEvents tsbInfo As ToolStripButton
 End Class

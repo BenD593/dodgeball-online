@@ -96,6 +96,10 @@ Partial Class frmGameSetup
         Me.txtGreenE5 = New System.Windows.Forms.TextBox()
         Me.txtGreenA1 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.tsbExit = New System.Windows.Forms.ToolStripButton()
+        Me.tsbHelp = New System.Windows.Forms.ToolStripButton()
+        Me.tsbInfo = New System.Windows.Forms.ToolStripButton()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -104,6 +108,7 @@ Partial Class frmGameSetup
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -1103,36 +1108,75 @@ Partial Class frmGameSetup
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel1, 0, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel2, 2, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label21, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label22, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label23, 2, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label24, 1, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnNext, 1, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.ToolStrip1, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel1, 0, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel2, 2, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label21, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label22, 0, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label23, 2, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label24, 1, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.btnNext, 1, 4)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 4
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel3.RowCount = 5
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(1352, 734)
         Me.TableLayoutPanel3.TabIndex = 7
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.TableLayoutPanel3.SetColumnSpan(Me.ToolStrip1, 3)
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbExit, Me.tsbHelp, Me.tsbInfo})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(1352, 22)
+        Me.ToolStrip1.TabIndex = 15
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'tsbExit
+        '
+        Me.tsbExit.Image = Global.dodgeball_online.My.Resources.Resources.exit_icon
+        Me.tsbExit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbExit.Name = "tsbExit"
+        Me.tsbExit.Size = New System.Drawing.Size(46, 19)
+        Me.tsbExit.Text = "Exit"
+        '
+        'tsbHelp
+        '
+        Me.tsbHelp.Image = Global.dodgeball_online.My.Resources.Resources.help_icon
+        Me.tsbHelp.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbHelp.Name = "tsbHelp"
+        Me.tsbHelp.Size = New System.Drawing.Size(52, 19)
+        Me.tsbHelp.Text = "Help"
+        '
+        'tsbInfo
+        '
+        Me.tsbInfo.Image = Global.dodgeball_online.My.Resources.Resources.info_icon
+        Me.tsbInfo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbInfo.Name = "tsbInfo"
+        Me.tsbInfo.Size = New System.Drawing.Size(48, 19)
+        Me.tsbInfo.Text = "Info"
         '
         'Label21
         '
         Me.Label21.AutoSize = True
         Me.TableLayoutPanel3.SetColumnSpan(Me.Label21, 3)
-        Me.Label21.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label21.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.White
-        Me.Label21.Location = New System.Drawing.Point(3, 0)
+        Me.Label21.Location = New System.Drawing.Point(3, 22)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(1346, 55)
+        Me.Label21.Size = New System.Drawing.Size(1346, 51)
         Me.Label21.TabIndex = 2
-        Me.Label21.Text = "Dodgeball on Zoom - Game Setup"
+        Me.Label21.Text = "Dodgeball Online - Game Setup"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label22
@@ -1173,8 +1217,8 @@ Partial Class frmGameSetup
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(399, 73)
         Me.Label24.TabIndex = 5
-        Me.Label24.Text = "Welcome to Dodgeball on Zoom. Please start be entering all players intials once o" &
-    "n either green making sure to distrubute teams members. One Done Click Next."
+        Me.Label24.Text = "Welcome to Dodgeball on Zoom. Please start by entering all players intials once o" &
+    "n either grid making sure to distrubute teams members. One Done, Click Next."
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnNext
@@ -1200,13 +1244,15 @@ Partial Class frmGameSetup
         Me.Controls.Add(Me.TableLayoutPanel3)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmGameSetup"
-        Me.Text = "Dodgeball on Zoom"
+        Me.Text = "Dodgeball Online - Game Setup"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1290,4 +1336,8 @@ Partial Class frmGameSetup
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents btnNext As Button
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents tsbExit As ToolStripButton
+    Friend WithEvents tsbHelp As ToolStripButton
+    Friend WithEvents tsbInfo As ToolStripButton
 End Class

@@ -212,7 +212,6 @@ Public Class frmGameActive
     '########################################################'
     Private Sub timThrow_Tick(sender As Object, e As EventArgs) Handles timThrow.Tick
         pibDice.Image = Image.FromStream(lisDiceImages(random.Next(0, 6)))
-        'pibDice.Refresh()
         intDieCount = intDieCount + 1
         lblArrow.Text = lisArrows(random.Next(0, 8))
         intArrowCount = intArrowCount + 1
@@ -406,6 +405,16 @@ Public Class frmGameActive
     End Sub
     Private Sub txtGreenE5_Click(ByVal sender As Object, ByVal e As EventArgs) Handles txtGreenE5.DoubleClick
         strTarget = "GreenE5"
+    End Sub
+
+    Private Sub tsbExit_Click(sender As Object, e As EventArgs) Handles tsbExit.Click
+        subExit()
+    End Sub
+    Private Sub tsbHelp_Click(sender As Object, e As EventArgs) Handles tsbHelp.Click
+        subHelp()
+    End Sub
+    Private Sub tsbInfo_Click(sender As Object, e As EventArgs) Handles tsbInfo.Click
+        subInfo()
     End Sub
 
 End Class
