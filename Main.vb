@@ -1081,7 +1081,7 @@ Module Main
     End Sub
 
     Sub subInfo()
-        Dim mymessage As String = "Dodgeball Online" & Environment.NewLine & "Version: 1.1" & Environment.NewLine & "Github: www.github.com/dodgeball-online/dodgeball-online" & Environment.NewLine & "This Program and its Source code is Licensed under General Public License v3.0, for more information see GitHub repository." & Environment.NewLine & Environment.NewLine & "Attribution: " & Environment.NewLine() & "Dice Images: Made by Alfredo Hernandez from www.flaticon.com" & Environment.NewLine & "Icons: Made by Google from www.flaticon.com"
+        Dim mymessage As String = "Dodgeball Online" & Environment.NewLine & "Version: 1.2" & Environment.NewLine & "Github: www.github.com/dodgeball-online/dodgeball-online" & Environment.NewLine & "This Program and its Source code is Licensed under General Public License v3.0, for more information see GitHub repository." & Environment.NewLine & Environment.NewLine & "Attribution: " & Environment.NewLine() & "Dice Images: Made by Alfredo Hernandez from www.flaticon.com" & Environment.NewLine & "Icons: Made by Google from www.flaticon.com"
         MsgBox(mymessage)
     End Sub
 End Module
