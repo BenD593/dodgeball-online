@@ -74,16 +74,25 @@ Module Main
             If intScorePoints = 1 Or intScorePoints = 2 Then
                 intGreenScore = intGreenScore + intScorePoints
                 frmGameActive.lblGreenScore.Text = intGreenScore
-            ElseIf intScorePoints = 3 Or intScorePoints = 4 Or intScorePoints = 10 Then
-                intBlueScore = intBlueScore + intScorePoints
+            ElseIf intScorePoints = 3 Then
                 frmGameActive.lblBlueScore.Text = intBlueScore
+            ElseIf intScorePoints = 4 Or intScorePoints = 10 Then
+                intBlueScore = intBlueScore + intScorePoints
+                intGreenScore = intGreenScore - 4
+                frmGameActive.lblBlueScore.Text = intBlueScore
+                frmGameActive.lblGreenScore.Text = intGreenScore
             End If
         Else
             If intScorePoints = 1 Or intScorePoints = 2 Then
                 intBlueScore = intBlueScore + intScorePoints
                 frmGameActive.lblBlueScore.Text = intBlueScore
-            ElseIf intScorePoints = 3 Or intScorePoints = 4 Or intScorePoints = 10 Then
+            ElseIf intScorePoints = 3 Then
                 intGreenScore = intGreenScore + intScorePoints
+                frmGameActive.lblGreenScore.Text = intGreenScore
+            ElseIf intScorePoints = 4 Or intScorePoints = 10 Then
+                intGreenScore = intGreenScore + intScorePoints
+                intBlueScore = intBlueScore - 4
+                frmGameActive.lblBlueScore.Text = intBlueScore
                 frmGameActive.lblGreenScore.Text = intGreenScore
             End If
         End If
@@ -181,7 +190,7 @@ Module Main
                         frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to catch the ball!"
                         frmGameActive.Controls.Find("txt" & strResult, True).FirstOrDefault().BackColor = Color.Red
                     ElseIf intCatchTotalNumber > 10 Then
-                        subScore(4)
+                        subScore(5)
                         frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Caught the ball!"
 
                     End If
@@ -190,7 +199,7 @@ Module Main
                         frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to catch the ball!"
                         frmGameActive.Controls.Find("txt" & strResult, True).FirstOrDefault().BackColor = Color.Red
                     ElseIf intCatchTotalNumber > 11 Then
-                        subScore(4)
+                        subScore(5)
                         frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Catch the ball!"
                     End If
                 Case 5, 6
@@ -198,7 +207,7 @@ Module Main
                         frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Failed to catch the ball!"
                         frmGameActive.Controls.Find("txt" & strTarget, True).FirstOrDefault().BackColor = Color.Red
                     ElseIf intCatchTotalNumber > 12 And intCatchTotalNumber <> 14 Then
-                        subScore(4)
+                        subScore(5)
                         frmGameActive.lblResult.Text = frmGameActive.lblResult.Text & Environment.NewLine() & "Catch the ball!"
                     ElseIf intCatchTotalNumber = 14 Then
                         subScore(10)
